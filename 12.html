@@ -1,0 +1,63 @@
+<div id="scam-message" style="background: #fff; color: #000; border-radius: 10px; padding: 15px; max-width: 350px; margin: 20px auto; border: 1px solid #ccc; text-align: left; font-family: sans-serif; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+    <p style="margin:0; font-weight: bold; color: #075e54;">🎁 Prize Notification</p>
+    <hr>
+    <p>CONGRATULATIONS! You have been selected as the Grand Prize Winner of our 2026 Tech Giveaway! You have won a brand new <b>iPhone 17 Pro Max</b>.</p>
+    <p><b>Claim Code:</b> WINNER77<br><b>Status:</b> Pending Shipment 🚛</p>
+    <p>Click below to pay shipping fee (₹99):</p>
+    <button onclick="startHackedEffect()" style="background: #25d366; color: white; border: none; width: 100%; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">
+        🔗 http://apple-reward-winner.top/claim
+    </button>
+</div>
+
+<div id="hacker-terminal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: #000; color: #0f0; z-index: 10000; padding: 20px; font-family: 'Courier New', monospace; text-align: left; overflow: hidden;">
+    <div id="terminal-text"></div>
+</div>
+
+<script>
+function startHackedEffect() {
+    // Show terminal
+    const term = document.getElementById('hacker-terminal');
+    term.style.display = 'block';
+    
+    const lines = [
+        "> Initializing exploit...",
+        "> Bypassing firewall...",
+        "> Accessing Contacts... [OK]",
+        "> Stealing Gallery Photos... [45%]",
+        "> Locating UPI/Bank Apps... [FOUND]",
+        "> Uploading data to remote server...",
+        "> STRIKE SUCCESSFUL."
+    ];
+
+    let i = 0;
+    const terminalDiv = document.getElementById('terminal-text');
+
+    function typeLine() {
+        if (i < lines.length) {
+            terminalDiv.innerHTML += lines[i] + "<br>";
+            i++;
+            setTimeout(typeLine, 600); // Speed of the typing
+        } else {
+            // After lines are done, show the big "I HACKED YOU"
+            setTimeout(finalScreamer, 500);
+        }
+    }
+    typeLine();
+}
+
+function finalScreamer() {
+    const term = document.getElementById('hacker-terminal');
+    term.style.backgroundColor = "red";
+    term.style.color = "white";
+    term.innerHTML = `
+        <div style="text-align:center; padding-top:100px;">
+            <h1 style="font-size: 80px;">I HACKED YOU!</h1>
+            <p style="font-size: 24px;">Just kidding! We are Class VI students.</p>
+            <p>But a real hacker wouldn't be this nice.</p>
+            <button onclick="location.reload()" style="padding:10px 20px; font-size:20px;">Return to Safety</button>
+        </div>
+    `;
+    // Vibrate phone
+    if (navigator.vibrate) navigator.vibrate([500, 200, 500]);
+}
+</script>
